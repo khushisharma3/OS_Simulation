@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Page Replacement</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  
+</head>
+
+<body style="background-image: url('header.jpg'); color: white">
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-3">Page Replacement</h1>
+      <p class="lead">Page replacement is a process of swapping out an existing page from the frame of a main memory and replacing it with a new page. It is required when all the frames of main memory (or the ones alloted for the process) are already
+        occupied. Thus, a page has to be replaced to create a room for the required page.</p>
+      <hr class="my-4">
+      <p class="lead">
+        <a class="btn btn-success" href="simulate.html" role="button">SIMULATE</a>
+      </p>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card text-white bg-danger mb-3" style="max-width: 25rem;">
+          <div class="card-header">FIFO</div>
+          <div class="card-body">
+            <h4 class="card-title">First In First Out</h4>
+            <p class="card-text">In this algorithm,the OS keeps track of all pages in the memory in a queue, with the oldest page in the front of the queue. When a page needs to be replaced, the page at the front of the queue is selected for removal.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card text-white bg-danger mb-3" style="max-width: 25rem;">
+          <div class="card-header">LRU</div>
+          <div class="card-body">
+            <h4 class="card-title">Least Recently Used</h4>
+            <p class="card-text">This algorithm replaces the page which has not been referred for the longest time.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card text-white bg-danger mb-3" style="max-width: 25rem;">
+          <div class="card-header">Optimal</div>
+          <div class="card-body">
+            <h4 class="card-title">Optimal</h4>
+            <p class="card-text">This algorithm replaces the page which will not be referred for the longest in future. It exists only in theory and is used as a benchmark</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>

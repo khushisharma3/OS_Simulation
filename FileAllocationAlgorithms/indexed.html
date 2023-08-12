@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Indexed Simulation</title>
+    <link rel="stylesheet" href="../assets/css/file-block.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="simu-title">
+            <h2>Indexed Simulation</h2>
+        </div>
+
+        <div class="left-section">
+
+            <div class="block-board" id="block-board">
+                <script> for (let index = 0; index < 200; index++) {
+                        document.write('<div class="block-empty" id="block-' + index + '"> ' + index + '</div>');
+                    } </script>
+            </div>
+            <div class="button-board">
+                <button class="control-button" id="step">Step</button>
+                <button class="control-button" id="auto">Auto</button>
+                <button class="control-button" id="input">Select Data File</button>
+            </div>
+        </div>
+
+        <div class="right-section">
+            <h3> Instructions:</h3>
+            <div class="raw-instructions-display">
+                <div class="raw-instructions" id="raw-instructions"> </div>
+            </div>
+            <h3 id="file-infomation-table-title" class="clickable-h3">File Information Table or Index Block</h3>
+            <div class="file-information-table">
+                <div class="directory-table" id="directory-table"></div>
+            </div>
+            <h3> Messages:</h3>
+            <div class="execution-message">
+                <div class="messages" id="messages"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        require("indexed.js")
+    </script>
+
+</body>
+
+</html>

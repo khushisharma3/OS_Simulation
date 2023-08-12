@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CPU Scheduling</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../CPU_Scheduling/css/bootswatch.css" />
+</head>
+
+<body background="header.jpg">
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+    <a class="navbar-brand" href="../Intro/home.html">Home</a>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../CPU_Scheduling/index.html">CPU Scheduling</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../Disk/disk_schedule.html">Disk Scheduling</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../Deadlock/index.html">Deadlock</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../File_System/index.html">File System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../MFT/index.html">Fixed Partitioning(MFT)</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../MVT/index.html">Variable Partitioning(MVT)</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../Page/pg.html">Paging</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../Page/index.html">Page Replacement</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../Process_Synchronization/index.html">Process Synchronization</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-3"; style = "color: #ffa100;"><b>CPU Scheduling </b></h1>
+      <h4><b>What is CPU Scheduling ?</b></h4>
+      <p>CPU Scheduling deals with the problem of deciding which of the processes in the ready queue is to be allocated the CPU. The aim of CPU scheduling is to make the system <em>fast</em>, <em>efficient</em> and <em>fair</em>, and to
+        <em>never</em> keep the CPU <em>idle</em>.</p>
+        <h4><b>Why CPU Scheduling algorithms are needed ?</b></h4>
+        <p>CPU Scheduling algorithms are needed to improve the efficiency of the system. It helps you to allocate resources among competing processes. The maximum utilization of CPU can be obtained with multi-programming. The processes which are to be executed are in ready queue.</p>
+        <h4><b>Important Terms related to CPU Scheduling Algorithms</b></h4>
+        <ul>
+         <li> <b>Arrival Time - </b> Time at which the process arrives in the ready queue.</li>
+         <li> <b>Completion Time - </b> Time at which process completes its execution.</li>
+         <li> <b>Burst Time - </b> Time required by a process for CPU execution.</li>
+         <li> <b>Turn Around Time - </b> The total time interval present between the time of process submission and the time of its completion.</li>
+         <li> <b>Waiting Time - </b>The total time that a process spends while waiting in a ready queue before reaching the CPU.</li>
+        </ul>
+      <hr class="my-4">
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card text-white bg-danger mb-3" style="max-width: 25rem;">
+          <div class="card-header">FCFS</div>
+          <div class="card-body">
+            <h4 class="card-title">First Come First Served</h4>
+            <p class="card-text">FCFS is the simplest scheduling algorithm where the process that requests the CPU first is allocated the CPU first. It is non-preemptive and is implemented with a <em>FIFO</em> queue.</p>
+            <a class="btn btn-warning" href="src/fcfs.html" role="button">Simulate!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card text-white bg-danger mb-3" style="max-width: 25rem;">
+          <div class="card-header">SJF</div>
+          <div class="card-body">
+            <h4 class="card-title">Shortest Job First</h4>
+            <p class="card-text">SJF selects the waiting process with the <em>smallest execution time</em> to execute next (<em>non-preemptively</em>).</p>
+            <a class="btn btn-warning" href="src/sjf.html" role="button">Simulate!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card text-white bg-danger mb-3" style="max-width: 25rem;">
+          <div class="card-header">SRTF</div>
+          <div class="card-body">
+            <h4 class="card-title">Shortest Remaining Time First</h4>
+            <p class="card-text">SRTF is the <em>preemptive</em> version of <em>SJF</em> scheduling.</p>
+            <a class="btn btn-warning" href="src/srtf.html" role="button">Simulate!</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+
+
+      <div class="col-sm-4">
+        <div class="card text-white bg-danger mb-3" style="max-width: 25rem;">
+          <div class="card-header">Priority</div>
+          <div class="card-body">
+            <h4 class="card-title">Priority Scheduling</h4>
+            <p class="card-text">Priority scheduling is a method of scheduling processes based on <em>priority</em>. Processes with equal priority are executed on FCFS basis. Both preemptive and non-preemptive versions exist.</p>
+            <a class="btn btn-warning" href="src/priority.html" role="button">Simulate!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card text-white bg-danger mb-3" style="max-width: 25rem;">
+          <div class="card-header ">RR</div>
+          <div class="card-body">
+            <h4 class="card-title">Round Robin Scheduling</h4>
+            <p class="card-text">Round Robin Scheduling treats the ready queue as a <em>circular queue</em>. The CPU scheduler goes around the ready queue, allocating the CPU to each process for a fixed time interval called <em>time quantum</em>.</p>
+            <a class="btn btn-warning" href="src/rr.html" role="button">Simulate!</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</body>
+
+</html>

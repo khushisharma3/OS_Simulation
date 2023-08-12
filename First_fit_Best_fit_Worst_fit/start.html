@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>MFT</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../First_fit_Best_fit_Worst_fit/bootswatch.css" />
+</head>
+
+<body background="header.jpg">
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+    <a class="navbar-brand" href="../Intro/home.html">Home</a>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../CPU_Scheduling/index.html">CPU Scheduling</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../Disk/disk_schedule.html">Disk Scheduling</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../Deadlock/index.html">Deadlock</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../File_System/index.html">File System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../MFT/index.html">Fixed Partitioning(MFT)</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../MVT/index.html">Variable Partitioning(MVT)</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../Page/pg.html">Paging</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../Page/index.html">Page Replacement</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../Process_Synchronization/index.html">Process Synchronization</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+  <div class="container">
+    <div class="jumbotron">
+      <a href="../Intro/home.html"><img src="../First_fit_Best_fit_Worst_fit/left.png" style="height: 40px;width: 40px;position: absolute; top: 200px;left: 0px;"></img></a>
+      <a href="../Disk/disk_schedule.html"><img src="../First_fit_Best_fit_Worst_fit/right.png" style="height: 40px;width: 40px;position: absolute; top: 200px;right: 0px;"></img></a>
+      <h1 class="display-3"; style = "color: #ffa100;"><b>MFT: First Fit,Best Fit,Worst Fit </b></h1>
+      <h4><b>What is Memory Management ?</b></h4>
+      <p>Memory management is a form of resource management applied to computer memory. The essential requirement of memory management is to provide ways to dynamically allocate portions of memory to programs at their request, and free it for reuse when no longer needed. This is critical to any advanced computer system where more than a single process might be underway at any time.</p>
+        <h4><b>Why is Memory Management needed ?</b></h4>
+        <p>For both fixed and dynamic memory allocation schemes, the operating system must keep list of each memory location noting which are free and which are busy. Then as new jobs come into the system, the free partitions must be allocated.
+            These partitions may be allocated by 4 ways:</p>
+            <ol>
+            <li> First-Fit Memory Allocation</li>
+            <li> Best-Fit Memory Allocation</li>
+            <li> Worst-Fit Memory Allocation</li>
+             <li>Next-Fit Memory Allocation </li>
+        </ol>
+      <hr class="my-4">
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+          <div class="card text-white bg-danger mb-3" style="max-width: 25rem;">
+            <div class="card-header">MFT</div>
+            <div class="card-body">
+              <h4 class="card-title"> Multiprogramming with fixed tasks</h4>
+              <p class="card-text">Memory is divided into several fixed-size partitions. Each partition may contain exactly one process/task. Boundaries for partitions are set at boot time and are not movable.The degree of multiprogramming is bound by the number of partitions.</p>
+              <a class="btn btn-warning" href="../First_fit_Best_fit_Worst_fit/index.html" role="button">Simulate</a>
+            </div>
+          </div>
+        </div>

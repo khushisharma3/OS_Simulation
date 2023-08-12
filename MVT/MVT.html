@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8"/>
+  <head>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+	<!-- =============== Bootstrap Core CSS =============== -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+    <!-- =============== fonts awesome =============== -->
+    <link rel="stylesheet" href="assets/font/css/font-awesome.min.css" type="text/css">
+    <!-- =============== Plugin CSS =============== -->
+    <link rel="stylesheet" href="assets/css/animate.min.css" type="text/css">
+    <!-- =============== Custom CSS =============== -->
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <!-- =============== Owl Carousel Assets =============== -->
+    <link href="assets/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="assets/owl-carousel/owl.theme.css" rel="stylesheet">
+	
+	 <link rel="stylesheet" href="assets/css/isotope-docs.css" media="screen">
+	  <link rel="stylesheet" href="assets/css/baguetteBox.css">
+
+    <!-- JavaScript Files -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/typeit.js"></script>
+    <script src="js/MVT.js"></script>
+    <script src="js/typed.js"></script>
+
+    <title>
+      Multiprogramming with Variable Number of Tasks
+    </title>
+
+  </head>
+
+  <body style="background-color:black">
+  <nav id="mainNav" class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+                    <ul class="nav navbar-nav navbar-right" style="font-size:14px">
+						<li>
+                            <a class="page-scroll" href="../index.html#topics">Topics</a>
+                        </li>
+						<li>
+                            <a class="page-scroll" href="../index.html#topics">CPU Scheduling</a>
+                        </li>
+						<li>
+                            <a class="page-scroll" href="../index.html#topics">Disk Scheduling</a>
+                        </li>
+						<li>
+                            <a class="page-scroll" href="../index.html#topics">Deadlock</a>
+                        </li>
+						<li>
+                            <a class="page-scroll" href="../index.html#topics">File system</a>
+                        </li>
+						<li>
+                            <a class="page-scroll" href="../index.html#topics">MFT</a>
+                        </li>
+						<li>
+                            <a class="page-scroll" href="../index.html#topics">Paging</a>
+                        </li>
+						<li>
+                            <a class="page-scroll" href="../index.html#topics">Page replacement</a>
+                        </li>
+						<li>
+                            <a class="page-scroll" href="../index.html#topics">Synchronization</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- =============== navbar-collapse =============== -->
+
+            </div>
+        </div>
+        <!-- =============== container-fluid =============== -->
+    </nav>
+  <br>
+  <br>
+  <br>
+  <div class="container">
+  <br>
+  <br>
+  <div class="jumbotron" style="background-image:linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('css/emp-12.jpg');">
+	<div id="page-heading">
+          <h1 style="color:Orange;">MVT<br> </h1>
+		  <h2 style="color:black">Multiprogramming with a Variable number of Tasks<br></h2>
+		  <hr>
+		  <p style="color:black">In the MVT scheme, the OS keeps track of which parts of memory are available and 
+		  which are occupied. Initially, all memory is available for user processes and is 
+		  considered one large block of available memory, a hole. Eventually, as the processes 
+		  start entering and leaving the memory,there will be a set of holes of various sizes.</p>
+      </div>
+	  
+	  <br>
+	</div>
+	</div>
+	<div id = "data-input-content-1" class="container-fluid-it">
+      <h2 style="text-align: center"> Enter the following details: </h2> </br>
+      <form class = "form-horizontal">
+        <div class = "form-group">
+          <label class = "control-label col-sm-2" for = "memorySize"> Total Memory: </label>
+          <div class = "col-sm-4">
+            <input type = "number" class = "form-control" id = "memory" placeholder = "Enter total memory size in bytes" required min="1">
+          </div>
+        </div>
+		<br>
+        
+      </form>
+	  <div class = "form-group" style="text-align:center">
+        <button id = "input-memory-submit" value = "next" class="btn btn-info1">Continue</button>
+    </div> 
+    </div>
+	
+    <div class="container-fluid" style="margin-right:50px">
+	<hr width=1000>
+	<br>
+      <div id="selection-form">
+          <button type="button" id="first-fit-select" class="btn btn-info">First-Fit</button>
+          <button type="button" id="best-fit-select" class="btn btn-info">Best-Fit</button>
+          <button type="button" id="worst-fit-select" class="btn btn-info">Worst-Fit</button>
+      </div>
+
+      <div id="demo-box">
+          <div class="col-sm-6" id="left-box">
+              <div class="col-sm-6">
+                  <h4>Main Memory</h4>
+                  <div id="block-0">
+                    <div id = "block--1"> </div>
+                  </div>
+              </div>
+              <div class="col-sm-6">
+                  <h4>Input Queue</h4>
+                  <div id="input-q-box">
+                  </div>
+                  <br>
+                  <button class="btn btn-info" id="add-process-button">Add Process</button>
+              </div>
+          </div>
+          <div class="col-sm-6" id="right-box">
+              <div class="row" id="top-box">
+                  <h3>Output Table</h3>
+                  <table class="table table-striped" id="output-table">
+                    <thead>
+                      <tr>
+                        <th>Process No.</th>
+                        <th>Process Size</th>
+                        <th>Allocation Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                  </table>
+              </div>
+              <div class="row" id="bottom-box">
+                <div id="terminal-header" style="text-align: center;">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-6">Terminal</div>
+                    <div class="col-sm-3"></div>
+                </div>
+                <div id="terminal-body">
+
+                </div>
+              </div>
+          </div>
+      </div>
+
+  </body>
+
+</html>

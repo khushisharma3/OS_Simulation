@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>File Allocation</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="disk_schedule.js"></script>
+  <link rel="stylesheet" type="text/css" href="../Intro/css/bootswatch.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <style>
+    body {
+      background-image: url('header.jpg');
+      color: white;
+    }
+    .navbar-inner {
+    background: transparent;
+    }
+    .navbar{
+      font-size: 15px;
+    }
+    .questions{
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron" style="background: transparent;">
+      <h1 class="display-3" style="color: #ffa100; font-weight: 600; margin-bottom: 20px;">File Allocation</h1>
+      <p>
+        The allocation methods define how the files are stored in the disk blocks. There are three main disk space or file allocation methods.
+<br>
+<ul>
+    <li>Contiguous Allocation</li>
+    <li>Linked Allocation</li>
+    <li>Indexed Allocation</li>
+</ul>
+<br>
+The main idea behind these methods is to provide:
+<br>
+<ul>
+    <li>Efficient disk space utilization.</li>
+    <li>Fast access to the file blocks.</li>
+</ul>
+      </p>
+      <hr class="my-4">
+    </div>
+    
+    <a href="contiguous.html"><button class="btn" style="background-color: #ffa100;">Contiguous Allocation</button></a>
+    <a href="linked.html"><button class="btn" style="background-color: #ffa100;">Linked Allocation</button></a>
+    <a href="indexed.html"><button class="btn" style="background-color: #ffa100">Indexed Allocation</button></a>
+</body>
+
+</html>
